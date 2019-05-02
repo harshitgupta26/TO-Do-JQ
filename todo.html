@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="todo.js"></script>
+    <title>TO-DO</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <input type="text" class="todoinput" placeholder="Enter Task..." autofocus>
+            </div>
+        </div>
+        <div class="row" id="filters">
+            <div class="col-6 text-white">
+                <p id="pendcount">Pending: </p>
+            </div>
+            <div class="col-6 text-white">
+                <p id="clearcomp">Clear Completed: </p>
+            </div>
+            <div class="col-2">
+                <button id="select" class="btn btn-outline-danger">&#10004;</button>
+            </div>
+            <div class="col-3">
+                <button id="all" class="btn btn-outline-danger active">All</button>
+            </div>
+            <div class="col-3">
+                <button id="active" class="btn btn-outline-danger">Active</button>
+            </div>
+            <div class="col-4">
+                <button id="completed" class="btn btn-outline-danger">Completed</button>
+            </div>
+            <ul class="col-12 list-group todos">
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

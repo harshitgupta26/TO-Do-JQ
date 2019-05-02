@@ -1,0 +1,110 @@
+
+body {
+    background-image: radial-gradient(#908d8d, #000000) !important;
+    font-family: "Dosis", sans-serif !important;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: black;
+    margin-top: 100px;
+    padding: 20px !important;
+    box-shadow: 0 0 8px 5px #908d8d;
+    max-width: 600px !important;
+    transition: all 0.3s ease-in;
+}
+.todoinput {
+    border: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-weight: 100;
+    font-size: 25px;
+    width: 100%;
+    border-radius: 10px;
+    height: 60px;
+    color: red;
+}
+input::placeholder {
+    opacity: .5;
+}
+.todos {
+    padding: 15px !important;
+}
+.todo {
+}
+button {
+    width: 100%;
+}
+input:focus {
+    outline: none;
+}
+li > input[type="checkbox"] {
+    visibility: hidden;
+}
+li > button {
+    display: none;
+    float: right;
+    border: none;
+    width: 10px;
+    margin-top: 5px;
+    margin-right: 20px;
+    background: none;
+    color: red;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0 20px 0 10px;
+}
+li > button:focus {
+    outline: none;
+}
+li:hover > button {
+    display: block;
+}
+.check {
+    position: absolute;
+    cursor: pointer;
+    padding-right: 10px;
+    top: 20px;
+    transform: scale(1.5);
+    left: 20px;
+    opacity: .5;
+    height: 30px;
+    width: 15px;
+    color: red;
+    transition: 0.3s all;
+}
+li {
+    opacity: .8;
+}
+label {
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.complete {
+    opacity: .6;
+    text-decoration: line-through;
+}
+#clearcomp {
+    margin-left: 35%;
+    cursor: pointer;
+}
+input[type=checkbox]:checked span{
+    color: #248914;
+    transform: scale(2);
+}
+input[type=checkbox]:checked label{
+    opacity: .6;
+    text-decoration: line-through;
+}
+#clearcomp:hover {
+    color: red;
+}
+.edittodo {
+    font-size: 20px;
+    color: red;
+    display: none;
+    width: 400px;
+    margin: 0 0 0 20px;
+    border: none;
+}
