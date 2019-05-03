@@ -117,11 +117,21 @@ $(document).ready(function () {
         });
         calculate();
         saveTodos();
+        showFilters();
     });
     //Select All To-Dos
     $("#select").click(function () {
         let checkboxes = $("input[type=checkbox]");
-        if(checkboxes.prop("checked")) {
+        let x;
+         for(let i=0; i<checkboxes.length; i++) {
+            if(checkboxes[i].checked) {
+                x=true;
+            } else {
+                x=false;
+                break;
+            }
+        }
+        if(x) {
             $(".check").css("color", "red").css("transform", "scale(1.5)");
             checkboxes.prop("checked", false);
             $("label").removeClass("complete");
@@ -140,7 +150,7 @@ $(document).ready(function () {
         saveTodos();
         activeButton();
     });
-    //Cleat the checked To-Dos
+    //Clear the checked To-Dos
     $("#clearcomp").click(function () {
         fetchedTodos.todos = $.grep(fetchedTodos.todos, function (todo) {
            return  (todo.completed === false);
@@ -148,6 +158,7 @@ $(document).ready(function () {
        saveTodos();
        calculate();
        showFetchedTodos();
+        showFilters();
     });
 
     //Functionality to Edit the To-do
