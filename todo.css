@@ -58,7 +58,7 @@ li > button:focus {
     outline: none;
 }
 li:hover > button {
-    display: block;
+    display: inline-block;
 }
 .check {
     position: absolute;
@@ -80,6 +80,8 @@ label {
     margin-left: 20px;
     font-size: 20px;
     text-decoration: none;
+    margin-bottom: 0 !important;
+    width: 82%;
 }
 .complete {
     opacity: .6;
@@ -109,11 +111,34 @@ input[type=checkbox]:checked label{
     border: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     #clearcomp {
         margin-left: 25%;
     }
     .edittodo {
         width: 280px;
     }
+    .container {
+        width: 100%;
+    }
+}
+/*.heading {*/
+    /*color: red;*/
+    /*margin-left: 27%;*/
+    /*font-size: 80px;*/
+    /*margin-top: -120px;*/
+    /*opacity: .5;*/
+/*}*/
+::-webkit-scrollbar  {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px black;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #cb7e72;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ae685c;
 }
